@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="bg-gray-800">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wallpapers4You</title>
+        <link rel="icon" type="image/png" href="/icons/favicon.png" />
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <link href="/styles/index.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="search">
+            <img class="logo mb-9" src="/icons/logo.png">
+            <div class="searchArea mt-1">
+                <div class="relative">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input type="text" id="search" class="shadow-xl bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-80 pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500" placeholder="Search for anything">
+                </div>
+                <button onclick="search()" class="searchBtn inline-flex items-center rounded-lg z-10 px-4 py-2 font-semibold leading-6 text-sm bg-indigo-500 hover:bg-indigo-400 transition ease-in-out duration-150 text-white shadow-sm">
+                    <svg class="hidden spinBtn animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Search
+                </button>
+            </div>
+            <p class="errorSearch hidden text-pink-600 text-sm">
+                No results.
+            </p>
+        </div>
+        <div class="backgrounds">
+            <div class="wallpapers hidden">
+                <div class="swiper-wrapper">
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="wallpapers.slideNext()" class="inline-flex items-center justify-center mr-2 text-pink-100 transition-colors duration-150 bg-gray-700 rounded-full focus:shadow-outline hover:bg-gray-600">
+                    <img src="/icons/next.svg">
+                </button>
+                <button onclick="wallpapers.slidePrev()" class="inline-flex items-center justify-center mr-2 text-pink-100 transition-colors duration-150 bg-gray-700 rounded-full focus:shadow-outline hover:bg-gray-600">
+                    <img class="rotate-180" src="/icons/next.svg">
+                </button>
+                <button onclick="download()" class="inline-flex items-center justify-center mr-2 text-pink-100 transition-colors duration-150 bg-gray-700 rounded-full focus:shadow-outline hover:bg-gray-600">
+                    <img src="/icons/download.svg">
+                </button>
+            </div>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" src="/samples/1.jpg">
+                <img class="swiper-slide" src="/samples/2.jpg">
+                <img class="swiper-slide" src="/samples/3.png">
+                <img class="swiper-slide" src="/samples/4.png">
+                <img class="swiper-slide" src="/samples/5.jpg">
+            </div>
+        </div>
+
+        <script src="/scripts/index.js"></script>
+    </body>
+</html>
