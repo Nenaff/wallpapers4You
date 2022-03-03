@@ -1,0 +1,27 @@
+{
+  "name": "wallpapersforyou",
+  "version": "1.0.0",
+  "description": "Browse your favorite wallpapers",
+  "main": "run.js",
+  "scripts": {
+    "scss": "node-sass scss -o styles",
+    "start": "node run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nenaff/wallpapers4You.git"
+  },
+  "keywords": [
+    "wallpaper",
+    "node.js"
+  ],
+  "author": "Nenaff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nenaff/wallpapers4You/issues"
+  },
+  "homepage": "https://github.com/Nenaff/wallpapers4You#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
