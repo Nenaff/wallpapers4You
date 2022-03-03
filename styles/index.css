@@ -33,12 +33,17 @@
   padding-left: 50px;
   position: relative;
   overflow: hidden; }
-  .backgrounds .swiper-wrapper {
-    height: 792px;
-    width: 1408px; }
-    .backgrounds .swiper-wrapper > img {
-      object-fit: cover;
-      transition: filter 5s; }
+  @media screen and (max-width: 1600px) {
+    .backgrounds .swiper-wrapper {
+      height: 960px;
+      width: 640px; } }
+  @media screen and (min-width: 1600px) {
+    .backgrounds .swiper-wrapper {
+      height: 792px;
+      width: 1408px; } }
+  .backgrounds .swiper-wrapper > img {
+    object-fit: cover;
+    transition: filter 5s; }
 
 .buttons {
   align-items: center;

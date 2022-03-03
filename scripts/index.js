@@ -105,7 +105,7 @@ function animation() {
 }
 
 async function grabPictures() {
-    return await $.post( "/search", { count: count, q: $("#search").val() });
+    return await $.post( "/search", { screen: window.innerWidth > window.innerHeight ? "pc" : "mobile", count: count, q: $("#search").val() });
 }
 
 function updateNewPictures(data) {

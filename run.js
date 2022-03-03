@@ -11,15 +11,27 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + "/index.html");
 })
 
+
 app.post('/search', (req, res) => {
-  let query = req.body.q + " wallpaper pc";
+  let screen = req.body.screen;
+  let query = req.body.q + " wallpaper " + screen;
   let count = req.body.count;
 
-  
+  console.log(query)
 
   duck.image_search({ query: query, moderate: true }).then(results=> {
     let json = [...new Set(results)];
-    res.json(json.filter(e => e.width > e.height && e.width >= 1920 && e.height >= 1080).slice(0, 100).map(e => e.image))
+
+    switch (screen) {
+      case "mobile":
+        json = json.filter(e => e.width < e.height && e.width >= 640 && e.height >= 960);
+        break;
+      case "pc":
+        json = json.filter(e => e.width > e.height && e.width >= 1920 && e.height >= 1080);
+        break;
+    }
+
+    res.json(json.slice(0, 100).map(e => e.image))
   })
 })
 

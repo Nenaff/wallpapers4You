@@ -40,8 +40,14 @@
     overflow: hidden;
 
     .swiper-wrapper {
-        height: 792px;
-        width: 1408px;
+        @media screen and (max-width: 1600px) {
+            height: 960px;
+            width: 640px;    
+        }
+        @media screen and (min-width: 1600px) {
+            height: 792px;
+            width: 1408px;  
+        }
 
         > img {
             object-fit: cover;
