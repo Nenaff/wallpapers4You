@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Nenaff/wallpapers4You#readme",
   "dependencies": {
+    "duckduckgo-images-api": "^1.0.5",
     "node-sass": "^7.0.1"
   }
 }
